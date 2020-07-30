@@ -3,11 +3,81 @@ background-color: plum;
 }
 
 .App {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-flow: column;
+}
+
+.header {
+  background-color: rebeccapurple;
+  color: black;
+  text-decoration-color: seashell;
   text-align: center;
-  background-color: powderblue;
-  min-height: 650px;
-  width: 550px;
-  margin: 40px auto;
+  padding: 6px;
+}
+
+.home-todof {
+  background-color: rebeccapurple;
+  color: black;
+  text-decoration-color: seashell;
+  text-align: center;
+  padding: 6px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column;
+  max-width: 60pt;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-todof-big {
+
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  background-color: rebeccapurple;
+  color: black;
+  text-decoration-color: seashell;
+  text-align: center;
+  padding: 6px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10pt;
+  width: 1000px;
+  margin-left: auto;
+  margin: 30px auto;
+}
+
+.sidenav {
+  line-height: 50px;
+  background-color: teal;
+  height: auto;
+  width: auto;
+  float: left;
+  padding: 5px;
+}
+
+.content {
+  margin-left: 70pt;
+  width: 1200pt;
+  float: left;
+  padding: 10px;
+}
+
+.home {
+  display: flex;
 }
 
 .App-logo {

@@ -9,7 +9,7 @@ Modal.setAppElement('#root')
 const todoModal = (props) => {
     return (
         <div>
-            <Modal isOpen={props.modal_open} className="modal-div">
+            <Modal isOpen={props.modal_open} className="modal">
                 <form className="todoList-div">
                     <input className="todoBar" 
                         type="text" 

@@ -3,7 +3,7 @@ import styles from '../styles/styles.css';
 import IconButton from '@material-ui/core/IconButton';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
-const todoForm = ( {handleChange, handleSubmit, title, data, add_status, addButtonHandler} ) => {
+const todoForm = ( {handleChange, handleSubmit, title, data, add_status, addButtonHandler, closeForm, inputRef} ) => {
     
     if (!add_status)
      {
@@ -17,26 +17,42 @@ const todoForm = ( {handleChange, handleSubmit, title, data, add_status, addButt
      } else {
         return (
             <div>
-                <form className="todoForm" onSubmit= {handleSubmit}>
+                <form onSubmit= {handleSubmit} >
                     <input className="todoBar" 
-                        type="text" 
+                        type="textarea" 
                         title="Todo Title" 
                         name="title"
                         placeholder="Give a Title (Optional)"
                         value={title}
+                        rows={5}
+                        cols={10}
+                        wrap="hard"
                         onChange={handleChange}/>
-                    <input multiline="true" 
+                    <input 
                         className="todoBar" 
-                        type="text"
+                        type="textarea"
                         name="data" 
                         title="Todo Details" 
                         placeholder="Give some detalils" 
                         value={data}
-                        onChange={handleChange}/> 
-                    <button className="todoButton" 
-                            type="submit" > 
-                            Add 
-                    </button>
+                        rows={5}
+                        cols={10}
+                        wrap="hard"
+                        onChange={handleChange}
+                        ref={inputRef}
+                        autoFocus/> 
+                    <div className="button-div">
+                        <button 
+                            className="todoButton" 
+                            type="button" 
+                            onClick={closeForm}> 
+                                Cancel 
+                        </button>
+                        <button className="todoButton" 
+                                type="submit" > 
+                                Add 
+                        </button>
+                    </div>
                 </form>
             </div>
         )}
